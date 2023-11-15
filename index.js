@@ -7,6 +7,13 @@ const app = express();
 const port = 3000;
 
 import userRouter from "./routes/user.route.js"
+import authRouter from "./routes/auth.route.js"
+
+
+app.use(express.json());
+app.use('/api/user',userRouter);
+app.use('/api/auth',authRouter);
+
 
 mongoose.connect(process.env.MONGO)
 .then(()=>{
@@ -20,4 +27,6 @@ app.listen(port,()=>{
     console.log(`Server is runing on port ${port} !!!`)
 })
 
-app.use('/api/user',userRouter);
+
+
+
