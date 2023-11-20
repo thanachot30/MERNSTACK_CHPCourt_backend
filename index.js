@@ -4,11 +4,10 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = 8000;
 
 import userRouter from "./routes/user.route.js"
 import authRouter from "./routes/auth.route.js"
-
 
 app.use(express.json());
 
