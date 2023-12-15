@@ -1,7 +1,6 @@
 import {errorHandle} from "../utils/error.js"
 import User from "../models/user.model.js"
 import bcryptjs from 'bcryptjs'
-import { trusted } from "mongoose"
 
 export const test = (req,res,next)=>{
     try {
